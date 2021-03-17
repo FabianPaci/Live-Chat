@@ -1,0 +1,20 @@
+{
+  "name": "Live-Chat",
+  "version": "1.0.0",
+  "description": "chat live with friends (my introduction to networking with socket io)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabianPaci/Live-Chat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FabianPaci/Live-Chat/issues"
+  },
+  "homepage": "https://github.com/FabianPaci/Live-Chat#readme"
+}
