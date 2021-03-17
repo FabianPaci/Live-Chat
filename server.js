@@ -8,8 +8,13 @@ const server = http.createServer(app);
 const PORT = 8000 || process.env.PORT;
 const io = socketio(server);
 
+// listen for messages
+
 // connections and disconnections
 io.on("connection", (socket) => {
+  socket.on("chatMessage", (msg) => {
+    io.emit("message", msg);
+  });
   socket.emit("message", "welcome to live chat!");
 
   socket.broadcast.emit("message", "user has joined the chat");
@@ -17,11 +22,6 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     io.emit("user has disconnected");
   });
-});
-
-// listen for messages
-socket.on("message", (msg) => {
-  io.emit("message", msg);
 });
 
 app.use(express.static(path.join(__dirname, "public")));

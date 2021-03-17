@@ -1,5 +1,5 @@
-const chatForm = document.getElementById("chat-form");
 const socket = io();
+const chatForm = document.getElementById("chat-form");
 
 socket.on("message", (message) => {
   console.log(message);
